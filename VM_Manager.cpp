@@ -79,6 +79,7 @@ void VMManager::load_init_file(const std::string &filename) {
                 // PT is on disk — store into D[block][p]
                 int block = -pt_frame;
                 D[block][p] = f;
+                if (f > 0) used[f] = true;
             }
         }
     }
